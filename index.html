@@ -8,38 +8,31 @@
 <p>Current number of clicks: <span id="clicks"><strong>0</strong></span></p>
 <br>
 <p id="taunts"></p>
-<br>
-<p id="stopped" style="display:none"></p>
 
 <button onclick="myFunction()">Begin</button>
 
 <script>
 var clicks = 0
 function myFunction() {
-    if (stop = false) {
-        var btn = document.createElement("BUTTON");
-        var t = document.createTextNode("CLICK ME");
-        btn.appendChild(t);
-        btn.setAttribute("onclick", "myFunction()")
-        document.body.appendChild(btn);
-        clicks++;
-        document.getElementById("clicks").innerHTML = "<strong>" + clicks + "</strong>";
-        if (clicks > 99) {
-            document.getElementById("taunts").textContent = "Really?";
-        } else if (clicks > 199) {
-            document.getElementById("taunts").textContent = "Do you even excercise, bro?";
-        } else if (clicks > 499) {
-             document.getElementById("taunts").textContent = "Do you even have a life?";
-        } else if (clicks > 599) {
-            document.getElementById("taunts").textContent = "Do you even have a life? I'm being serious here.";
-        } else if (clicks > 999) {
-            document.getElementById("taunts").textContent = "Fine. You win. Go outside and get some excercise.";
-        } else if (clicks > 1099) {
-            document.getElementById("taunts").textContent = "You know what? I'm shutting this cycle down.";
-            stop = true
-            document.getElementById("stopped").setAttribute("style","");
-            document.getElementById("stopped").innerHTML = "<span style='background-color:red'>BUTTON CLICKER HAS STOPPED DUE TO SHUTDOWN FROM AI.</span>"
-        };
+    var btn = document.createElement("BUTTON");
+    var t = document.createTextNode("CLICK ME");
+    btn.appendChild(t);
+    btn.setAttribute("onclick", "myFunction()")
+    document.body.appendChild(btn);
+    clicks++;
+    document.getElementById("clicks").innerHTML = "<strong>" + clicks + "</strong>";
+    if (clicks > 99) {
+        document.getElementById("taunts").textContent = "Really?";
+    } else if (clicks > 199) {
+        document.getElementById("taunts").textContent = "Do you even excercise, bro?";
+    } else if (clicks > 499) {
+         document.getElementById("taunts").textContent = "Do you even have a life?";
+    } else if (clicks > 599) {
+        document.getElementById("taunts").textContent = "Do you even have a life? I'm being serious here.";
+    } else if (clicks > 999) {
+        document.getElementById("taunts").textContent = "Fine. You win. Go outside and get some excercise.";
+    } else if (clicks > 1099) {
+        document.getElementById("taunts").textContent = "You know what? I'm done.";
     };
 };
 </script>
