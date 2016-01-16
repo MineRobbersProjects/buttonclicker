@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Button Clicker</p>
+
+<button onclick="myFunction()">Begin</button>
+
+<script>
+var clicks = 0
+function myFunction() {
+    var btn = document.createElement("BUTTON");
+    var t = document.createTextNode("CLICK ME");
+    btn.appendChild(t);
+    btn.setAttribute("onclick", "myFunction()")
+    document.body.appendChild(btn);
+    clicks++;
+}
+</script>
+
+</body>
+</html>
