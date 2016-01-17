@@ -22,15 +22,20 @@ function myFunction() {
     document.getElementById("clicks").innerHTML = "<strong>" + clicks + "</strong>";
     if (clicks > 99) {
         document.getElementById("taunts").textContent = "Really?";
-    } else if (clicks > 199) {
+    };
+    if (clicks > 199) {
         document.getElementById("taunts").textContent = "Do you even excercise, bro?";
-    } else if (clicks > 499) {
+    };
+    if (clicks > 499) {
          document.getElementById("taunts").textContent = "Do you even have a life?";
-    } else if (clicks > 599) {
+    };
+    if (clicks > 599) {
         document.getElementById("taunts").textContent = "Do you even have a life? I'm being serious here.";
-    } else if (clicks > 999) {
+    };
+    if (clicks > 999) {
         document.getElementById("taunts").textContent = "Fine. You win. Go outside and get some excercise.";
-    } else if (clicks > 1099) {
+    };
+    if (clicks > 1099) {
         document.getElementById("taunts").textContent = "You know what? I'm done.";
     };
 };
