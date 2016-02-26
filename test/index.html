@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Button Clicker - by MineRobber9000</title>
+    <link rel="shortcut icon" type="image/ico" href="../favicon.ico">
+</head>
+<body>
+
+<a href="https://github.com/MineRobbersProjects/buttonclicker/tree/gh-pages"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/e7bbb0521b397edbd5fe43e7f760759336b5e05f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png"></a>
+
+<h1>Button Clicker</h1><br>
+<p>Button Clicker is a game where you click a button to make more buttons appear. That's it.</p>
+<h2>Game:</h2>
+<p>Current number of clicks: <span id="clicks"><strong>0</strong></span></p>
+<p id="taunts"></p>
+
+<button onclick="document.getElementById('begin-button').textContent = 'CLICK ME'; myFunction();">Begin</button>
+
+<script>
+var clicks = 0
+function myFunction() {
+    var btn = document.createElement("BUTTON");
+    var t = document.createTextNode("CLICK ME");
+    btn.appendChild(t);
+    btn.setAttribute("onclick", "myFunction()")
+    document.body.appendChild(btn);
+    clicks++;
+    document.getElementById("clicks").innerHTML = "<strong>" + clicks + "</strong>";
+    if (clicks > 99) {
+        document.getElementById("taunts").textContent = "Really?";
+    };
+    if (clicks > 199) {
+        document.getElementById("taunts").textContent = "Do you even excercise, bro?";
+    };
+    if (clicks > 499) {
+         document.getElementById("taunts").textContent = "Do you even have a life?";
+    };
+    if (clicks > 599) {
+        document.getElementById("taunts").textContent = "Do you even have a life? I'm being serious here.";
+    };
+    if (clicks > 999) {
+        document.getElementById("taunts").textContent = "Fine. You win. Go outside and get some excercise.";
+    };
+    if (clicks > 1099) {
+        document.getElementById("taunts").textContent = "You know what? I'm done.";
+    };
+};
+</script>
+
+
+</body>
+</html>
